@@ -1,0 +1,10 @@
+CC=gcc
+CFLAGS=-Wall -Wextra -pedantic -std=c99
+
+all: l217512lab10q
+
+l217512lab10q: l217512lab10q.c
+	$(CC) $(CFLAGS) -o l217512lab10q l217512lab10q.c
+
+clean:
+	rm -f l217512lab10q

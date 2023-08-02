@@ -1,0 +1,17 @@
+l217512_main: l217512_main.o l217512_worker1.o 
+	gcc l217512_main.o l217512_worker1.o -o l217512_main
+	
+l217512_main: l217512_main.o l217512_worker2.o 
+	gcc l217512_main.o l217512_worker2.o -o l217512_main
+	
+l217512_main.o: l217512_main.c
+	gcc -c l217512_main.c
+	
+l217512_worker1.o: l217512_worker1.c 
+	gcc -c l217512_worker1.c
+	
+l217512_worker2.o: l217512_worker2.c 
+	gcc -c l217512_worker2.c
+	
+clean:
+	rm *.o l217512_main

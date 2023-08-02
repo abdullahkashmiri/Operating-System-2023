@@ -1,0 +1,10 @@
+CC=gcc
+CFLAGS= -pthread
+
+all: l217512q1
+
+l217512q1: l217512q1.c
+	$(CC) $(CFLAGS) -o l217512q1 l217512q1.c
+
+clean:
+	rm -f l217512q1
